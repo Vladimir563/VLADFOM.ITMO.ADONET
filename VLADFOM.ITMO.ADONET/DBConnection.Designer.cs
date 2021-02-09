@@ -44,6 +44,7 @@ namespace VLADFOM.ITMO.ADONET
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnStartTransaction = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -171,11 +172,22 @@ namespace VLADFOM.ITMO.ADONET
             this.columnHeader3.Text = "Фасовка";
             this.columnHeader3.Width = 150;
             // 
+            // btnStartTransaction
+            // 
+            this.btnStartTransaction.Location = new System.Drawing.Point(13, 353);
+            this.btnStartTransaction.Name = "btnStartTransaction";
+            this.btnStartTransaction.Size = new System.Drawing.Size(224, 23);
+            this.btnStartTransaction.TabIndex = 7;
+            this.btnStartTransaction.Text = "Транзакция";
+            this.btnStartTransaction.UseVisualStyleBackColor = true;
+            this.btnStartTransaction.Click += new System.EventHandler(this.btnStartTransaction_Click);
+            // 
             // DBConnection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 356);
+            this.ClientSize = new System.Drawing.Size(473, 388);
+            this.Controls.Add(this.btnStartTransaction);
             this.Controls.Add(this.listViewProducts);
             this.Controls.Add(this.btnGetProductsList);
             this.Controls.Add(this.labelHowMuchProductsWithStaticMethod);
@@ -211,6 +223,7 @@ namespace VLADFOM.ITMO.ADONET
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.Button btnStartTransaction;
     }
 }
 

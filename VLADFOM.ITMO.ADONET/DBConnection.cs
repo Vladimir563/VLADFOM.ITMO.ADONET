@@ -178,5 +178,35 @@ namespace VLADFOM.ITMO.ADONET
                 }
             }
         }
+
+        private void btnStartTransaction_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString)) 
+            {
+                connection.Open();
+                SqlTransaction sqlTransaction = connection.BeginTransaction();
+                SqlCommand sqlCommand = connection.CreateCommand();
+                sqlCommand.Transaction = sqlTransaction;
+                try
+                {
+                    sqlCommand.CommandText = "INSERT INTO Products (ProductName, UnitPrice, QuantityPerUnit) VALUES('Wrong size', 12, '1 boxes')"; sqlCommand.ExecuteNonQuery();
+                    sqlCommand.CommandText = "INSERT INTO Products (ProductName, UnitPrice, QuantityPerUnit) VALUES('Wrong color', 25, '100 ml')"; sqlCommand.ExecuteNonQuery();
+                    sqlTransaction.Commit();
+                    MessageBox.Show("Строки записаны в базу данных");
+                }
+                catch (SqlException ex) 
+                {
+                    MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    try
+                    {
+                        sqlTransaction.Rollback();
+                    }
+                    catch (Exception exRollback)
+                    {
+                        MessageBox.Show(exRollback.Message);
+                    }
+                }
+            }
+        }
     }
 }
