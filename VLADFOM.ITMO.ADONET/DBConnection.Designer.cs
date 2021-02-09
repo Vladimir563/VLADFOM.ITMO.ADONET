@@ -39,6 +39,11 @@ namespace VLADFOM.ITMO.ADONET
             this.labelHowMuchProducts = new System.Windows.Forms.Label();
             this.btnHowMuchProductsWithStaticMethod = new System.Windows.Forms.Button();
             this.labelHowMuchProductsWithStaticMethod = new System.Windows.Forms.Label();
+            this.btnGetProductsList = new System.Windows.Forms.Button();
+            this.listViewProducts = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +53,7 @@ namespace VLADFOM.ITMO.ADONET
             this.workingWithDBToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(473, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -93,9 +98,9 @@ namespace VLADFOM.ITMO.ADONET
             // 
             // btnHowMuchProducts
             // 
-            this.btnHowMuchProducts.Location = new System.Drawing.Point(13, 37);
+            this.btnHowMuchProducts.Location = new System.Drawing.Point(13, 27);
             this.btnHowMuchProducts.Name = "btnHowMuchProducts";
-            this.btnHowMuchProducts.Size = new System.Drawing.Size(128, 23);
+            this.btnHowMuchProducts.Size = new System.Drawing.Size(224, 23);
             this.btnHowMuchProducts.TabIndex = 1;
             this.btnHowMuchProducts.Text = "Сколько продуктов";
             this.btnHowMuchProducts.UseVisualStyleBackColor = true;
@@ -104,14 +109,14 @@ namespace VLADFOM.ITMO.ADONET
             // labelHowMuchProducts
             // 
             this.labelHowMuchProducts.AutoSize = true;
-            this.labelHowMuchProducts.Location = new System.Drawing.Point(147, 47);
+            this.labelHowMuchProducts.Location = new System.Drawing.Point(243, 37);
             this.labelHowMuchProducts.Name = "labelHowMuchProducts";
             this.labelHowMuchProducts.Size = new System.Drawing.Size(0, 13);
             this.labelHowMuchProducts.TabIndex = 2;
             // 
             // btnHowMuchProductsWithStaticMethod
             // 
-            this.btnHowMuchProductsWithStaticMethod.Location = new System.Drawing.Point(13, 79);
+            this.btnHowMuchProductsWithStaticMethod.Location = new System.Drawing.Point(13, 56);
             this.btnHowMuchProductsWithStaticMethod.Name = "btnHowMuchProductsWithStaticMethod";
             this.btnHowMuchProductsWithStaticMethod.Size = new System.Drawing.Size(224, 23);
             this.btnHowMuchProductsWithStaticMethod.TabIndex = 3;
@@ -122,16 +127,57 @@ namespace VLADFOM.ITMO.ADONET
             // labelHowMuchProductsWithStaticMethod
             // 
             this.labelHowMuchProductsWithStaticMethod.AutoSize = true;
-            this.labelHowMuchProductsWithStaticMethod.Location = new System.Drawing.Point(244, 88);
+            this.labelHowMuchProductsWithStaticMethod.Location = new System.Drawing.Point(243, 66);
             this.labelHowMuchProductsWithStaticMethod.Name = "labelHowMuchProductsWithStaticMethod";
             this.labelHowMuchProductsWithStaticMethod.Size = new System.Drawing.Size(0, 13);
             this.labelHowMuchProductsWithStaticMethod.TabIndex = 4;
+            // 
+            // btnGetProductsList
+            // 
+            this.btnGetProductsList.Location = new System.Drawing.Point(13, 323);
+            this.btnGetProductsList.Name = "btnGetProductsList";
+            this.btnGetProductsList.Size = new System.Drawing.Size(224, 23);
+            this.btnGetProductsList.TabIndex = 5;
+            this.btnGetProductsList.Text = "Список продуктов";
+            this.btnGetProductsList.UseVisualStyleBackColor = true;
+            this.btnGetProductsList.Click += new System.EventHandler(this.btnGetProductsList_Click);
+            // 
+            // listViewProducts
+            // 
+            this.listViewProducts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listViewProducts.HideSelection = false;
+            this.listViewProducts.Location = new System.Drawing.Point(12, 85);
+            this.listViewProducts.Name = "listViewProducts";
+            this.listViewProducts.Size = new System.Drawing.Size(386, 232);
+            this.listViewProducts.TabIndex = 6;
+            this.listViewProducts.UseCompatibleStateImageBehavior = false;
+            this.listViewProducts.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Название продукта";
+            this.columnHeader1.Width = 135;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Цена";
+            this.columnHeader2.Width = 100;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Фасовка";
+            this.columnHeader3.Width = 150;
             // 
             // DBConnection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(473, 356);
+            this.Controls.Add(this.listViewProducts);
+            this.Controls.Add(this.btnGetProductsList);
             this.Controls.Add(this.labelHowMuchProductsWithStaticMethod);
             this.Controls.Add(this.btnHowMuchProductsWithStaticMethod);
             this.Controls.Add(this.labelHowMuchProducts);
@@ -139,7 +185,7 @@ namespace VLADFOM.ITMO.ADONET
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "DBConnection";
-            this.Text = "Form1";
+            this.Text = "Working with DataBase";
             this.Load += new System.EventHandler(this.DBConnection_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -160,6 +206,11 @@ namespace VLADFOM.ITMO.ADONET
         private System.Windows.Forms.Label labelHowMuchProducts;
         private System.Windows.Forms.Button btnHowMuchProductsWithStaticMethod;
         private System.Windows.Forms.Label labelHowMuchProductsWithStaticMethod;
+        private System.Windows.Forms.Button btnGetProductsList;
+        private System.Windows.Forms.ListView listViewProducts;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }
 

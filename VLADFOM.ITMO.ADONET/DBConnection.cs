@@ -151,5 +151,32 @@ namespace VLADFOM.ITMO.ADONET
                 MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnGetProductsList_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString)) 
+            {
+                try
+                {
+                    SqlCommand command = new SqlCommand("SELECT ProductName, UnitPrice, QuantityPerUnit FROM Products", connection);
+                    connection.Open();
+                    SqlDataReader sqlDataReader = command.ExecuteReader();
+
+                    if (sqlDataReader.HasRows) 
+                    {
+                        while (sqlDataReader.Read()) 
+                        {
+                            ListViewItem newItem = listViewProducts.Items.Add(sqlDataReader["ProductName"].ToString());
+                            newItem.SubItems.Add(sqlDataReader.GetDecimal(1).ToString());
+                            newItem.SubItems.Add(sqlDataReader["QuantityPerUnit"].ToString());
+                        }
+                    }
+                }
+                catch (SqlException ex) 
+                {
+                    MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }
