@@ -33,6 +33,8 @@ namespace VLADFOM.ITMO.ADONET
             this.workingWithDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.connectToDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.disconnectFromDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asyncConnectToDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.connectionsListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +52,9 @@ namespace VLADFOM.ITMO.ADONET
             // 
             this.workingWithDBToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.connectToDBToolStripMenuItem,
-            this.disconnectFromDBToolStripMenuItem});
+            this.disconnectFromDBToolStripMenuItem,
+            this.asyncConnectToDBToolStripMenuItem,
+            this.connectionsListToolStripMenuItem});
             this.workingWithDBToolStripMenuItem.Name = "workingWithDBToolStripMenuItem";
             this.workingWithDBToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
             this.workingWithDBToolStripMenuItem.Text = "Working with DB";
@@ -58,16 +62,30 @@ namespace VLADFOM.ITMO.ADONET
             // connectToDBToolStripMenuItem
             // 
             this.connectToDBToolStripMenuItem.Name = "connectToDBToolStripMenuItem";
-            this.connectToDBToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.connectToDBToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.connectToDBToolStripMenuItem.Text = "Connect to DB";
             this.connectToDBToolStripMenuItem.Click += new System.EventHandler(this.connectToDBToolStripMenuItem_Click);
             // 
             // disconnectFromDBToolStripMenuItem
             // 
             this.disconnectFromDBToolStripMenuItem.Name = "disconnectFromDBToolStripMenuItem";
-            this.disconnectFromDBToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.disconnectFromDBToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.disconnectFromDBToolStripMenuItem.Text = "Disconnect from DB";
             this.disconnectFromDBToolStripMenuItem.Click += new System.EventHandler(this.disconnectFromDBToolStripMenuItem_Click);
+            // 
+            // asyncConnectToDBToolStripMenuItem
+            // 
+            this.asyncConnectToDBToolStripMenuItem.Name = "asyncConnectToDBToolStripMenuItem";
+            this.asyncConnectToDBToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.asyncConnectToDBToolStripMenuItem.Text = "Async connect to DB";
+            this.asyncConnectToDBToolStripMenuItem.Click += new System.EventHandler(this.asyncConnectToDBToolStripMenuItem_Click);
+            // 
+            // connectionsListToolStripMenuItem
+            // 
+            this.connectionsListToolStripMenuItem.Name = "connectionsListToolStripMenuItem";
+            this.connectionsListToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.connectionsListToolStripMenuItem.Text = "Connections List";
+            this.connectionsListToolStripMenuItem.Click += new System.EventHandler(this.connectionsListToolStripMenuItem_Click);
             // 
             // DBConnection
             // 
@@ -78,6 +96,7 @@ namespace VLADFOM.ITMO.ADONET
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "DBConnection";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.DBConnection_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -91,6 +110,8 @@ namespace VLADFOM.ITMO.ADONET
         private System.Windows.Forms.ToolStripMenuItem workingWithDBToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem connectToDBToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem disconnectFromDBToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem asyncConnectToDBToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem connectionsListToolStripMenuItem;
     }
 }
 
