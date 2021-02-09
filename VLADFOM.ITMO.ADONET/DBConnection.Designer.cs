@@ -35,6 +35,10 @@ namespace VLADFOM.ITMO.ADONET
             this.disconnectFromDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asyncConnectToDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.connectionsListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnHowMuchProducts = new System.Windows.Forms.Button();
+            this.labelHowMuchProducts = new System.Windows.Forms.Label();
+            this.btnHowMuchProductsWithStaticMethod = new System.Windows.Forms.Button();
+            this.labelHowMuchProductsWithStaticMethod = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,11 +91,51 @@ namespace VLADFOM.ITMO.ADONET
             this.connectionsListToolStripMenuItem.Text = "Connections List";
             this.connectionsListToolStripMenuItem.Click += new System.EventHandler(this.connectionsListToolStripMenuItem_Click);
             // 
+            // btnHowMuchProducts
+            // 
+            this.btnHowMuchProducts.Location = new System.Drawing.Point(13, 37);
+            this.btnHowMuchProducts.Name = "btnHowMuchProducts";
+            this.btnHowMuchProducts.Size = new System.Drawing.Size(128, 23);
+            this.btnHowMuchProducts.TabIndex = 1;
+            this.btnHowMuchProducts.Text = "Сколько продуктов";
+            this.btnHowMuchProducts.UseVisualStyleBackColor = true;
+            this.btnHowMuchProducts.Click += new System.EventHandler(this.btnHowMuchProducts_Click);
+            // 
+            // labelHowMuchProducts
+            // 
+            this.labelHowMuchProducts.AutoSize = true;
+            this.labelHowMuchProducts.Location = new System.Drawing.Point(147, 47);
+            this.labelHowMuchProducts.Name = "labelHowMuchProducts";
+            this.labelHowMuchProducts.Size = new System.Drawing.Size(0, 13);
+            this.labelHowMuchProducts.TabIndex = 2;
+            // 
+            // btnHowMuchProductsWithStaticMethod
+            // 
+            this.btnHowMuchProductsWithStaticMethod.Location = new System.Drawing.Point(13, 79);
+            this.btnHowMuchProductsWithStaticMethod.Name = "btnHowMuchProductsWithStaticMethod";
+            this.btnHowMuchProductsWithStaticMethod.Size = new System.Drawing.Size(224, 23);
+            this.btnHowMuchProductsWithStaticMethod.TabIndex = 3;
+            this.btnHowMuchProductsWithStaticMethod.Text = "Сколько продуктов (отдельный метод)";
+            this.btnHowMuchProductsWithStaticMethod.UseVisualStyleBackColor = true;
+            this.btnHowMuchProductsWithStaticMethod.Click += new System.EventHandler(this.btnHowMuchProductsWithStaticMethod_Click);
+            // 
+            // labelHowMuchProductsWithStaticMethod
+            // 
+            this.labelHowMuchProductsWithStaticMethod.AutoSize = true;
+            this.labelHowMuchProductsWithStaticMethod.Location = new System.Drawing.Point(244, 88);
+            this.labelHowMuchProductsWithStaticMethod.Name = "labelHowMuchProductsWithStaticMethod";
+            this.labelHowMuchProductsWithStaticMethod.Size = new System.Drawing.Size(0, 13);
+            this.labelHowMuchProductsWithStaticMethod.TabIndex = 4;
+            // 
             // DBConnection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelHowMuchProductsWithStaticMethod);
+            this.Controls.Add(this.btnHowMuchProductsWithStaticMethod);
+            this.Controls.Add(this.labelHowMuchProducts);
+            this.Controls.Add(this.btnHowMuchProducts);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "DBConnection";
@@ -112,6 +156,10 @@ namespace VLADFOM.ITMO.ADONET
         private System.Windows.Forms.ToolStripMenuItem disconnectFromDBToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem asyncConnectToDBToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem connectionsListToolStripMenuItem;
+        private System.Windows.Forms.Button btnHowMuchProducts;
+        private System.Windows.Forms.Label labelHowMuchProducts;
+        private System.Windows.Forms.Button btnHowMuchProductsWithStaticMethod;
+        private System.Windows.Forms.Label labelHowMuchProductsWithStaticMethod;
     }
 }
 

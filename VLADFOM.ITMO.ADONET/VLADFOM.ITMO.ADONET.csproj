@@ -55,6 +55,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkWithDataBase.cs" />
     <EmbeddedResource Include="DBConnection.resx">
       <DependentUpon>DBConnection.cs</DependentUpon>
     </EmbeddedResource>

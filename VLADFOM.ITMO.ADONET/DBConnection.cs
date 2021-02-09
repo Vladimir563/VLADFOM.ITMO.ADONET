@@ -113,5 +113,43 @@ namespace VLADFOM.ITMO.ADONET
                 }
             }
         }
+
+        private void btnHowMuchProducts_Click(object sender, EventArgs e)
+        {
+            using (connection) 
+            {
+                if (connection.State == ConnectionState.Closed)
+                {
+                    MessageBox.Show("Сначала подключитесь к базе");
+                    return;
+                }
+                SqlCommand command = new SqlCommand();
+                command.Connection = connection;
+                command.CommandText = "SELECT COUNT(*) FROM Products";
+
+                try
+                {
+                    int number = (int)command.ExecuteScalar();
+                    labelHowMuchProducts.Text = number.ToString();
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnHowMuchProductsWithStaticMethod_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int number = WorkWithDataBase.ExecuteScalarMetod(connectionString, "SELECT COUNT(*) FROM Products");
+                labelHowMuchProductsWithStaticMethod.Text = number.ToString();
+            }
+            catch (SqlException ex) 
+            {
+                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
