@@ -12,11 +12,11 @@ using System.Configuration;
 
 namespace VLADFOM.ITMO.ADONET
 {
-    public partial class DBConnection : Form
+    public partial class DBConnection_Form : Form
     {
         SqlConnection connection = new SqlConnection();
         //string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=Northwind; Integrated Security=true";
-        public DBConnection()
+        public DBConnection_Form()
         {
             InitializeComponent();
             this.connection.StateChange += new StateChangeEventHandler(this.connection_StateChange);

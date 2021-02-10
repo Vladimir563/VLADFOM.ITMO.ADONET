@@ -1,7 +1,7 @@
 ﻿
 namespace VLADFOM.ITMO.ADONET
 {
-    partial class DBConnection
+    partial class DBConnection_Form
     {
         /// <summary>
         /// Required designer variable.

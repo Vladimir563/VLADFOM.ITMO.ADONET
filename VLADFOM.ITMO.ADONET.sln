@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VLADFOM.ITMO.ADONET", "VLADFOM.ITMO.ADONET\VLADFOM.ITMO.ADONET.csproj", "{CC23112D-DE1E-4A35-BC45-9F084B9C41AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VLADFOM.ITMO.ADONET.DBConnection", "VLADFOM.ITMO.ADONET\VLADFOM.ITMO.ADONET.DBConnection.csproj", "{CC23112D-DE1E-4A35-BC45-9F084B9C41AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VLADFOM.ITMO.ADONET.DBCommand", "VLADFOM.ITMO.ADONET.DBCommand\VLADFOM.ITMO.ADONET.DBCommand.csproj", "{3CF8491A-CBCF-4D29-AF64-CC41EC0AE3D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{CC23112D-DE1E-4A35-BC45-9F084B9C41AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC23112D-DE1E-4A35-BC45-9F084B9C41AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC23112D-DE1E-4A35-BC45-9F084B9C41AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CF8491A-CBCF-4D29-AF64-CC41EC0AE3D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF8491A-CBCF-4D29-AF64-CC41EC0AE3D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF8491A-CBCF-4D29-AF64-CC41EC0AE3D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF8491A-CBCF-4D29-AF64-CC41EC0AE3D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

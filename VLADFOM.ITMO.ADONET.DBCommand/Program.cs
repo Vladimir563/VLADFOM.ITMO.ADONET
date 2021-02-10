@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VLADFOM.ITMO.ADONET
+namespace VLADFOM.ITMO.ADONET.DBCommand
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace VLADFOM.ITMO.ADONET
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DBConnection_Form());
+            Application.Run(new DBCommand_Form());
         }
     }
 }

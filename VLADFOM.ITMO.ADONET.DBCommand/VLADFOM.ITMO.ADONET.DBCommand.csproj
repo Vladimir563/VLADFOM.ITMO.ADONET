@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CC23112D-DE1E-4A35-BC45-9F084B9C41AB}</ProjectGuid>
+    <ProjectGuid>{3CF8491A-CBCF-4D29-AF64-CC41EC0AE3D0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>VLADFOM.ITMO.ADONET</RootNamespace>
-    <AssemblyName>VLADFOM.ITMO.ADONET</AssemblyName>
+    <RootNamespace>VLADFOM.ITMO.ADONET.DBCommand</RootNamespace>
+    <AssemblyName>VLADFOM.ITMO.ADONET.DBCommand</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,7 +34,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,17 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBConnection.cs">
+    <Compile Include="DBCommand_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DBConnection.Designer.cs">
-      <DependentUpon>DBConnection.cs</DependentUpon>
+    <Compile Include="DBCommand_Form.Designer.cs">
+      <DependentUpon>DBCommand_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WorkWithDataBase.cs" />
-    <EmbeddedResource Include="DBConnection.resx">
-      <DependentUpon>DBConnection.cs</DependentUpon>
+    <EmbeddedResource Include="DBCommand_Form.resx">
+      <DependentUpon>DBCommand_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
